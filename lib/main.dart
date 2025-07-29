@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart'; // File ini di-generate oleh FlutterFire CLI
+import 'package:hive_flutter/hive_flutter.dart';
+import 'data/models/local_appointment.dart';  
+import 'firebase_options.dart';
 import 'core/constants/app_colors.dart';
 import 'core/services/firestore_service.dart';
 import 'core/services/notification_service.dart';
 import 'presentation/screens/home/home_screen.dart';
 
 void main() async {
-  // Pastikan binding Flutter siap
   WidgetsFlutterBinding.ensureInitialized();
+
+  // Inisialisasi Hive
+  await Hive.initFlutter();
+  Hive.registerAdapter(LocalAppointmentAdapter());
+  await Hive.openBox<LocalAppointment>('appointments');
 
   // Inisialisasi Firebase
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // Inisialisasi service
   final NotificationService notificationService = NotificationService();
   await notificationService.init();
 

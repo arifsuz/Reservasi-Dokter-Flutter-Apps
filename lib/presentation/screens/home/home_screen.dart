@@ -6,6 +6,7 @@ import '../../../core/services/notification_service.dart';
 import '../../../data/models/doctor_model.dart';
 import '../../widgets/doctor_card.dart';
 import '../doctor_detail/doctor_detail_screen.dart';
+import '../notifications/notification_list_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   final FirestoreService firestoreService;
@@ -35,9 +36,20 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: Colors.grey.shade50,
       appBar: AppBar(
-        title: Text('Pilih Dokter', style: AppStyles.buttonText),
+        title: Text('Daftar Dokter', style: AppStyles.buttonText),
         backgroundColor: AppColors.primary,
         elevation: 0,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.notifications_outlined, color: Colors.white),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NotificationListScreen()),
+              );
+            },
+          ),
+        ],
       ),
       body: FutureBuilder<List<Doctor>>(
         future: _doctorsFuture,

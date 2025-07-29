@@ -36,6 +36,7 @@ class DoctorDetailScreen extends StatelessWidget {
       barrierDismissible: false,
       builder: (BuildContext dialogContext) {
         return BookingFormDialog(
+          doctor: doctor,
           doctorId: doctor.id,
           doctorName: doctor.name,
           appointmentTime: time,

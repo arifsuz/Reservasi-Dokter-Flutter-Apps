@@ -4,6 +4,9 @@ import '../../core/constants/app_colors.dart';
 import '../../core/constants/app_styles.dart';
 import '../../core/services/firestore_service.dart';
 import '../../core/services/notification_service.dart';
+import 'package:hive/hive.dart';
+import '../../data/models/local_appointment.dart';
+import '../../data/models/doctor_model.dart';
 
 class BookingFormDialog extends StatefulWidget {
   final String doctorId;
@@ -11,6 +14,7 @@ class BookingFormDialog extends StatefulWidget {
   final DateTime appointmentTime;
   final FirestoreService firestoreService;
   final NotificationService notificationService;
+  final Doctor doctor;
 
   const BookingFormDialog({
     super.key,
@@ -19,6 +23,7 @@ class BookingFormDialog extends StatefulWidget {
     required this.appointmentTime,
     required this.firestoreService,
     required this.notificationService,
+    required this.doctor,
   });
 
   @override
@@ -60,6 +65,15 @@ class _BookingFormDialogState extends State<BookingFormDialog> {
             );
           }
 
+          // Save to local storage
+                    final appointmentBox = Hive.box<LocalAppointment>('appointments');
+          final newAppointment = LocalAppointment(
+            doctorName: widget.doctor.name,
+            specialization: widget.doctor.specialization,
+            appointmentTime: widget.appointmentTime,
+          );
+          await appointmentBox.add(newAppointment);
+          
           Navigator.of(context).pop(true); // Return true on success
         } else {
           ScaffoldMessenger.of(context).showSnackBar(
