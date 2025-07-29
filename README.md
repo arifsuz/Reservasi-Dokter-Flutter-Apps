@@ -94,12 +94,19 @@ If you have a suggestion that would make this better, please fork the repo and c
 4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
-## 📄 License
+## 📸 Screenshots
 
-Distributed under the MIT License. See `LICENSE` for more information.
 
-## 📧 Contact
 
-Your Name - your.email@example.com
 
-Project Link: [https://github.com/your-username/aplikasi_konsultasi_dokter](https://github.com/your-username/aplikasi_konsultasi_dokter)
+## 📧 **Contact Authors**
+**Developed by :**
+**Muhamad Nur Arif**
+**(41523010147)**
+
+### **🔗 Link**
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ariftsx.vercel.app/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/arifsuz)
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marif8/)
+[![instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ariftsx/)
+
