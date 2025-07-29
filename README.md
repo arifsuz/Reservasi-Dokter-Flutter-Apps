@@ -1,4 +1,4 @@
-# Doctor Consultation App
+# Doctor Consultation App - Flutter and Firebase
 
 A Flutter-based mobile application for booking and managing doctor appointments. This application provides a seamless experience for users to find doctors, view their schedules, and book consultations.
 
@@ -95,7 +95,34 @@ If you have a suggestion that would make this better, please fork the repo and c
 5.  Open a Pull Request
 
 ## 📸 Screenshots
+**1. Home Screen (List of Available Doctors)**
 
+<img width="336" height="748" alt="Home Screen (Daftar Dokter Tersedia)" src="https://github.com/user-attachments/assets/3e1df5fc-6e89-46ff-bfa0-ecf247aaa891" />
+
+
+**2. Doctor Details**
+
+<img width="336" height="748" alt="Detail Dokter" src="https://github.com/user-attachments/assets/b8193bd8-627e-4b0b-9670-16e7982a63d4" />
+
+
+**3. Personal Data Form for Consultation**
+
+<img width="336" height="748" alt="Form Data Diri Konsultasi" src="https://github.com/user-attachments/assets/d74d3e14-b190-44de-8184-349574dd7dec" />
+
+
+**4. Personal Consultation Form (filled out)**
+
+<img width="336" height="748" alt="Form Data Diri Konsultasi (disi)" src="https://github.com/user-attachments/assets/e6d79545-53ad-4274-b511-f7515faf4084" />
+
+
+**5. Consultation Request Submitted Successfully**
+
+<img width="336" height="748" alt="Pengajuan Konsultasi Berhasil" src="https://github.com/user-attachments/assets/1964c3d0-8c57-4709-87eb-a162005e1ecc" />
+
+
+**6. Notification**
+
+<img width="336" height="748" alt="Notifikasi" src="https://github.com/user-attachments/assets/d6afcfb0-3be8-41bc-8a73-bff97b9f88af" />
 
 
 
